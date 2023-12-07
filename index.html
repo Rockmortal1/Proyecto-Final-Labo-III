@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Public/Favicon.png"image/x-icon">
+    <script src="https://cdn.lordicon.com/lordicon-1.2.0.js"></script>
+    <title>Juegos FTP</title>
+</head>
+
+<body class="body">
+    <header class="header" id="header">
+        <div class="logo"><img src="/Public/Logo.png" alt="logo"></div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#header" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="#filtros-container" class="nav-link">Filtros</a></li>
+                <li class="nav-item"><a href="#container" class="nav-link">Juegos</a></li>
+                <li class="nav-item"><a href="#footer" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h1 class="titulo" >Juegos Free-to-Play</h1>
+        <div class="filtros-container" id="filtros-container">
+           <div class="filter-header">
+                <h3 class="subtitulo">Filtros</h3>
+                <lord-icon
+                    src="https://cdn.lordicon.com/xcrjfuzb.json"
+                    trigger="hover"
+                    style="width:30px;height:30px">
+                </lord-icon>
+           </div>
+            <form id="filtros" class="filtrosDropdown">
+                <div class="form-group">
+                    <h4>Por género:</h4>
+                    <div class="filtros" id="tags"></div>
+                </div>
+                <div class="form-group">
+                    <h4>Por plataforma:</h4>
+                    <div class="filtros" id="plataformas">
+                        <div class="input-container"><input type="radio" value="all" name="platform" id="all"><label for="all">Todos</label></div>
+                        <div class="input-container"><input type="radio" value="pc" name="platform" id="pc"><label for="pc">PC</label></div>
+                        <div class="input-container"><input type="radio" value="browser" name="platform" id="browser"><label for="browser">Navegador</label></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4>Ordenar por:</h4>
+                    <div class="filtros">
+                        <div class="input-container"><input type="radio" value="relevance" name="sort-by" id="relevance"><label for="relevance">Relevancia</label></div>
+                        <div class="input-container"><input type="radio" value="name" name="sort-by" id="name"><label for="name">Nombre</label></div>
+                        <div class="input-container"><input type="radio" value="popularity" name="sort-by" id="popularity"><label for="popularity">Más populares</label></div>
+                        <div class="input-container"><input type="radio" value="release-date" name="sort-by" id="release-date"><label for="release-date">Fecha de salida</label></div>
+                    </div>
+                </div>
+                <input class="btn btn-submit" type="submit" value="Aplicar filtros">
+            </form>
+        </div>
+        <div class="container" id="container">
+            <h2 class="subtitulo2">Listado</h2>
+            <div class="cards-wrapper"></div>
+            <div class="pagination-container" id="pagination"></div>
+        </div>
+    </main>
+    <footer class="footer" id="footer"><p>@2023 Derechos reservados a JFTP</p></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
